@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.duduhali.myslidingmenu.MainActivity"
+    tools:ignore="MergeRootFrame">
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/main_linearView">
+         <include 
+             android:layout_height="wrap_content"
+             android:layout_width="fill_parent"
+             layout="@layout/ugted_head"/>
+         
+         <LinearLayout 
+             android:id="@+id/ll_main_tabhost_btn"
+             android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:layout_marginTop="3dip"
+        	android:gravity="center_horizontal"
+             >
+             <TextView 
+                 android:id="@+id/tv_bestTed_content"
+                android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:text="@string/tab_best_ted"
+    			android:layout_weight="1"
+    			android:textSize="15sp"
+    			android:padding="10dp"
+    			android:gravity="center_horizontal"
+    			android:background="#E6E6E6"
+                 />
+             <TextView 
+                 android:id="@+id/tv_newestTed_content"
+                android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:gravity="center_horizontal"
+    			android:background="#E52B1E"
+    			android:padding="10dp"
+    			android:textSize="15sp"
+    			android:text="@string/tab_newest_ted"
+    			android:layout_weight="1"
+                 />
+             
+         </LinearLayout>
+       <FrameLayout 
+	    android:id="@+id/id_content"
+	    android:layout_width="fill_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    >
+           
+           
+           
+       </FrameLayout>
+        
+    </LinearLayout>
+    
+    </FrameLayout>
+
+

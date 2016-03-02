@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="135dp"
+	    android:orientation="vertical"
+	    android:background="#fff"
+	     >
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_marginTop="10dip"
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="bottom"
+		    android:orientation="horizontal"
+		 >
+		 
+			 <Button 
+			    android:id="@+id/switchBtn"
+				android:onClick="toggleMenu"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/btn_switch"
+				/>
+		 
+		 
+			  <LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="bottom"
+			    android:gravity="right"
+			    android:orientation="horizontal"
+			 >
+				<TextView
+				    android:id="@+id/textView1"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:paddingRight="15dp"
+				    android:text="Small Text"
+				    android:textSize="20dp"
+				    android:textAppearance="?android:attr/textAppearanceSmall" />
+				
+				  <TextView
+				    android:id="@+id/textView2"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:paddingRight="15dp"
+				    android:text="TED"
+				    android:textSize="42dp"/>
+			</LinearLayout>
+				
+		</LinearLayout>
+		
+		<LinearLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="bottom"
+			    android:gravity="right"
+			    android:orientation="horizontal"
+			    android:focusable="true"
+				android:focusableInTouchMode="true"
+			 >
+			<EditText 
+			    android:id="@+id/search"
+			    android:layout_width="match_parent"
+				android:layout_height="40dp"
+				android:padding="5dp"
+				android:hint="@string/search"
+				android:gravity="right"
+				
+			    />
+				
+		</LinearLayout>
+		
+			<LinearLayout
+			    android:id="@+id/ll_head_title"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_gravity="bottom"
+			    android:gravity="right"
+			    android:layout_marginTop="3dip"
+			    android:orientation="horizontal"
+			    android:layout_marginRight="5dip"
+			 >
+				  <TextView 
+				      android:id="@+id/tv_head_title"
+				      android:layout_width="wrap_content"
+				      android:layout_height="wrap_content"
+				      android:layout_gravity="center_vertical"
+				      android:text=""
+				      android:textSize="20sp"
+				      android:layout_marginRight="5dip"
+				      />
+					<ImageView 
+					    android:id="@+id/iv_head_title"
+					    android:layout_width="wrap_content"
+				      	android:layout_height="wrap_content"
+				      	android:src="@drawable/login_02"
+				      	android:layout_marginRight="5dip"
+				      	android:layout_gravity="center_vertical"
+					    />
+					
+			</LinearLayout>
+		
+		<LinearLayout 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:gravity="right"
+		    >
+				
+		 <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:background="#E52B1E" />
+		    
+		</LinearLayout>
+		
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+      <include 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+        layout="@layout/ugted_head"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+   		android:orientation="vertical"
+        >
+         <ImageView 
+          	android:layout_width="match_parent"
+   			android:layout_height="wrap_content"
+   			android:src="@drawable/player"
+        />
+		<LinearLayout 
+		    android:layout_width="match_parent"
+    		android:layout_height="wrap_content"
+    		android:layout_gravity="center_vertical"
+   			android:orientation="horizontal">
+		    <ImageButton 
+		        android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_weight="2"
+    			android:layout_marginLeft="5dip"
+		        android:background="@drawable/item_btn_collect"
+		        />
+		    <ImageButton 
+		        android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_weight="2"
+    			android:layout_marginLeft="5dip"
+		        android:background="@drawable/item_btn_download"
+		        />
+		    <ImageButton 
+		        android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_weight="4"
+    			android:layout_marginLeft="5dip"
+		        android:background="@drawable/item_btn_share"
+		        />
+		    <ImageView 
+		        android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:layout_weight="3"
+    			android:layout_marginLeft="5dip"
+		        android:background="@drawable/item_btn_eye"
+		        />
+		    <TextView 
+		        android:layout_width="wrap_content"
+    			android:layout_height="wrap_content"
+    			android:gravity="center_vertical"
+    			android:layout_weight="2"
+    			android:text="546"
+		        />
+		    
+		</LinearLayout>
+		<LinearLayout 
+	        android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	   		android:orientation="vertical">
+		    <TextView 
+		        android:layout_width="match_parent"
+    			android:layout_height="wrap_content"
+    			android:layout_margin="2dip"
+    			android:layout_gravity="center_vertical"
+    			android:layout_marginRight="10dip"
+    			android:gravity="right"
+    			android:text="about ted"/>
+		    <ListView
+		        android:id="@+id/lv_item_listview"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		    </ListView>
+		</LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>
