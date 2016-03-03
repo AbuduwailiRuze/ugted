@@ -4,7 +4,9 @@ import android.app.ActivityManager;
 import android.app.ActivityManager.RunningAppProcessInfo;
 import android.app.Application;
 import android.content.Context;
+import android.content.pm.PackageManager.NameNotFoundException;
 
+import com.bilig.ugted.config.TedConfig;
 import com.example.playerdemo.handler.CrashHandler;
 import com.lecloud.config.LeCloudPlayerConfig;
 import com.letv.proxy.LeCloudProxy;
@@ -37,5 +39,23 @@ public class MApplication extends Application {
             LeCloudPlayerConfig.getInstance().setDeveloperMode(true).setIsApp().setUseLiveToVod(true);
             LeCloudProxy.init(getApplicationContext());
         }
+        
+        initGlobal();
     }
+    
+    /**
+	 * 初始化全局变量 实际工作中这个方法中serverVersion从服务器端获取，最好在启动画面的activity中执行
+	 */
+    
+    public void initGlobal() {
+		try {
+			// 获取本地版本号
+			TedConfig.localVersion = getPackageManager().getPackageInfo(
+					getPackageName(), 0).versionCode;
+			// 假设服务端版本号为2，这个应该是要获取服务器端的版本号的，这里只是假设服务端版本号2
+			//TedConfig.serverVersion = 2;
+		} catch (NameNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 }

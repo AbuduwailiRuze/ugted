@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import android.app.LauncherActivity.ListItem;
 
 import com.bilig.ugted.domain.MyIteam;
+import com.bilig.ugted.domain.UpdateInfo;
 import com.bilig.ugted.domain.UserInfo;
 
 public class MyJson {
@@ -29,6 +30,25 @@ public class MyJson {
 			e.printStackTrace();
 		}
 
+		return null;
+	}
+	
+	public static UpdateInfo getUpdateInfo(String value) {
+		// TODO Auto-generated method stub
+		try {
+			JSONObject jobj = new JSONObject(value);
+			String version = jobj.getString("VERSION");
+			String desc = jobj.getString("DESCRIPTION");
+			String url = jobj.getString("URL");
+			UpdateInfo updateInfo = new UpdateInfo();
+			updateInfo.setDescription(desc);
+			updateInfo.setVersion(version);
+			updateInfo.setUrl(url);
+			return updateInfo;
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		
 		return null;
 	}
 	
