@@ -2,15 +2,15 @@ package com.bilig.ugted.domain;
 
 public class UpdateInfo
 {
-        private String version;
+        private int version;
         private String description;
         private String url;
         
-        public String getVersion()
+        public int getVersion()
         {
                 return version;
         }
-        public void setVersion(String version)
+        public void setVersion(int version)
         {
                 this.version = version;
         }

@@ -43,11 +43,12 @@ public class MyGetFileThread implements Runnable{
 				is=httpResponse.getEntity().getContent();
 				reader = new BufferedReader(new InputStreamReader(is));
 				while ((line = reader.readLine()) != null) {
-					//System.out.println(sb.toString());
+					System.out.println(sb.toString());
 					sb.append(line);
 				}
 				msg.what = 200;
 				msg.obj = sb.toString();
+				System.out.println("myGetT"+sb.toString());
 				
 			}else{
 				msg.what = 404;

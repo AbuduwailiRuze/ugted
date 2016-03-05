@@ -239,8 +239,8 @@ public class UpdateService extends Service {
 
 	@Override
 	public void onDestroy() {
-		downThread.destroy();
-		downThread=null;
+		//downThread.destroy();
+		//downThread=null;
 		super.onDestroy();
 	}
 

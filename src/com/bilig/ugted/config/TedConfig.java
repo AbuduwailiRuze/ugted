@@ -17,7 +17,7 @@ public class TedConfig {
     //服務器版本信息
     public static int serverVersion = 0;
     //下載地址
-    public static String downloadDir = "app/download/";
+    public static String downloadDir = "UGted/download/";
     
 	public static final int REQUEST_CODE = 1;
 	public static final int RESULT_CODE = 2;
@@ -26,5 +26,6 @@ public class TedConfig {
 	
 	
 	public static UserInfo userInfo=null;
+	public static  String newApkName="UGTed.apk";
 
 }

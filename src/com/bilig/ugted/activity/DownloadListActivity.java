@@ -106,7 +106,7 @@ public class DownloadListActivity extends Activity {
 		mAdapter = new MyAdapter(mDownloadInfos);
 		mListView.setAdapter(mAdapter);
 		loadDataFromIntent();
-		downloadClick(uuid, vuid);
+		
 
 
 	}
@@ -121,6 +121,7 @@ public class DownloadListActivity extends Activity {
 			} else {
 				uuid = bundle.getString(PlayProxy.PLAY_UUID);
 				vuid = bundle.getString(PlayProxy.PLAY_VUID);
+				downloadClick(uuid, vuid);
 			}
 		}
 	}

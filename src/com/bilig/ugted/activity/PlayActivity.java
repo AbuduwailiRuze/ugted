@@ -4,18 +4,17 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.letv.controller.PlayProxy;
 import com.letv.simple.utils.LetvParamsUtils;
 import com.letv.simple.utils.LetvSimplePlayBoard;
-import com.letv.skin.utils.ScreenUtils;
 import com.letv.skin.v4.V4PlaySkin;
 import com.letv.universal.iplay.ISplayer;
 
@@ -45,6 +44,7 @@ public class PlayActivity extends Activity implements OnClickListener {
 		skin = (V4PlaySkin) findViewById(R.id.videobody);
 		playBoard = new LetvSimplePlayBoard();
 		playBoard.init(this, bundle, skin);
+		Log.i("playerActivity", ".........................................");
 		
 		initBtn();
 	}
@@ -65,9 +65,6 @@ public class PlayActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		int screenWidth = ScreenUtils.getWight(this);
-        int screenHeight = ScreenUtils.getHeight(this);
-        //System.out.println("onResume");
 	
 		if (playBoard != null) {
 			playBoard.onResume();
