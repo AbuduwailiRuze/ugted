@@ -1,5 +1,7 @@
 package com.bilig.ugted.app;
 
+import java.util.List;
+
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningAppProcessInfo;
 import android.app.Application;
@@ -11,11 +13,9 @@ import com.example.playerdemo.handler.CrashHandler;
 import com.lecloud.config.LeCloudPlayerConfig;
 import com.letv.proxy.LeCloudProxy;
 
-import java.util.List;
-
 public class MApplication extends Application {
 
-
+	
     public static String getProcessName(Context cxt, int pid) {
         ActivityManager am = (ActivityManager) cxt.getSystemService(Context.ACTIVITY_SERVICE);
         List<RunningAppProcessInfo> runningApps = am.getRunningAppProcesses();
@@ -33,6 +33,7 @@ public class MApplication extends Application {
     public void onCreate() {
         super.onCreate();
         String processName = getProcessName(this, android.os.Process.myPid());
+        // true or false
         if (getApplicationInfo().packageName.equals(processName)) {
             //TODO CrashHandler是一个抓取崩溃log的工具类（可选）
             CrashHandler.getInstance(this);
@@ -52,10 +53,12 @@ public class MApplication extends Application {
 			// 获取本地版本号
 			TedConfig.localVersion = getPackageManager().getPackageInfo(
 					getPackageName(), 0).versionCode;
-			// 假设服务端版本号为2，这个应该是要获取服务器端的版本号的，这里只是假设服务端版本号2
-			//TedConfig.serverVersion = 2;
 		} catch (NameNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
+    
+  
+    
+    
 }

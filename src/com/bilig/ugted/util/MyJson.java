@@ -36,20 +36,25 @@ public class MyJson {
 	public static UpdateInfo getUpdateInfo(String value) {
 		// TODO Auto-generated method stub
 		try {
+			
 			JSONObject jobj = new JSONObject(value);
 			String version = jobj.getString("VERSION");
 			String desc = jobj.getString("DESCRIPTION");
 			String url = jobj.getString("URL");
+			System.out.println("MyJson："+version+desc+url);
 			UpdateInfo updateInfo = new UpdateInfo();
+			
 			updateInfo.setDescription(desc);
-			updateInfo.setVersion(version);
+			updateInfo.setVersion(Integer.valueOf(version));
 			updateInfo.setUrl(url);
+			
 			return updateInfo;
 		} catch (JSONException e) {
 			e.printStackTrace();
+			return null;
 		}
 		
-		return null;
+		
 	}
 	
 	

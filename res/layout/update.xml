@@ -7,5 +7,30 @@
     <include layout="@layout/ugted_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        
+         <TextView 
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:text="最新更新内容"
+        	android:gravity="center"
+        	android:textSize="20sp"
+        	android:paddingTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/tvNewAppContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="10"
+            android:gravity="right"
+            android:padding="20dp"
+            android:text="1111111111111111111" />
+        
+    </LinearLayout>
 
 </LinearLayout>

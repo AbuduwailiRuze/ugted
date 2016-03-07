@@ -7,6 +7,7 @@ import java.util.Map;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -16,7 +17,7 @@ import android.widget.SimpleAdapter;
 
 import com.bilig.ugted.activity.AboutActivity;
 import com.bilig.ugted.activity.CollectActivity;
-import com.bilig.ugted.activity.DownloadActivity;
+import com.bilig.ugted.activity.DownloadListActivity;
 import com.bilig.ugted.activity.LoginActivity;
 import com.bilig.ugted.activity.MainActivity;
 import com.bilig.ugted.activity.MainMenuActivity;
@@ -47,6 +48,7 @@ public class MySlidingMenu implements OnItemClickListener {
 
 	public MySlidingMenu(Activity activity) {
 		this.activity = activity;
+		
 		this.data=getData();
 
 	}
@@ -65,7 +67,9 @@ public class MySlidingMenu implements OnItemClickListener {
 		slidingMenu.setMenu(R.layout.slidingmenu);
 		
 		loginItem = (ImageView) activity.findViewById(R.id.goto_login);
-		
+		if(loginItem==null){
+			Log.i("null", "loginItem"+R.id.goto_login);
+		}
 		
 		loginItem.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -181,7 +185,7 @@ public class MySlidingMenu implements OnItemClickListener {
 			case 4:
 				setToggle(false);
 				if (download == null) {
-					download = new Intent(activity, DownloadActivity.class);
+					download = new Intent(activity, DownloadListActivity.class);
 				}
 				activity.startActivity(download);
 				break;

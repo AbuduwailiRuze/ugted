@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bilig.ugted.activity"
-    android:versionCode="1"
+    android:versionCode="5"
     android:versionName="1.0" >
 
     <uses-sdk
@@ -104,6 +104,13 @@
             android:process=":cde" />
         <service android:name="com.bilig.ugted.service.UpdateService">
         </service>
+        <receiver android:name="com.bilig.ugted.recive.WifiBroadcastReceiver" >
+			<intent-filter>
+			<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+			<action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+			<action android:name="android.net.wifi.STATE_CHANGE" />
+		</intent-filter>
+</receiver>
     </application>
 
 </manifest>
